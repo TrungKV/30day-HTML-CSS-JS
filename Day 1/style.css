@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #4daf54;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.card {
+  margin: 120px auto;
+  width: 320px;
+  height: 400px;
+  background-color: #272d40;
+  padding: 20px;
+  border-radius: 20px;
+  color: aliceblue;
+  position: relative;
+  font-family: "Poppins";
+}
+.card_heart,
+.card_cart {
+  font-size: 25px;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+.card_cart {
+  left: unset;
+  right: 20px;
+}
+.card_img {
+  width: 80%;
+  height: 150px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+.card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card_title {
+  color: var(--primary-color);
+}
+
+.card_title,
+.card_price {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.card_color,
+.card_size {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.card_size span {
+  padding: 1px 10px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin: 0 4px;
+}
+
+.card_color span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+
+.card_color--green {
+  background-color: green;
+}
+.card_color--red {
+  background-color: red;
+}
+.card_color--black {
+  background-color: black;
+}
+.card_action button {
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  /* flex-direction: column-reverse;
+  display: flex;
+  justify-content: center; */
+  /* align-items: centers; */
+  margin-right: 10px;
+  transition: 0.25s;
+}
+.card_action button:hover {
+  transform: scale(0.9);
+}
+
+.card:hover .card_img {
+  transform: translateY(-90px) rotate(-20deg);
+}
+.card:hover .card_title {
+  transform: translate(-40px, -70px);
+}
+.card:hover .card_price {
+  transform: translate(-116px, -70px);
+}
+
+.card_size {
+  padding-top: 150px;
+}
+.card_size,
+.card_color,
+.card_action {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.4s;
+}
+.card:hover .card_size,
+.card:hover .card_color,
+.card:hover .card_action {
+  visibility: visible;
+  opacity: 999;
+}
+
+.card:hover .card_size {
+  margin-top: -160px;
+}
