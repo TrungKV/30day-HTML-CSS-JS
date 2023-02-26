@@ -1,0 +1,89 @@
+:root {
+  --pink__color: rgb(212, 129, 129);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to right, #4daf54, #3d8880);
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins";
+}
+
+.open__modal-btn {
+  padding: 30px 40px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+}
+
+.modal {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__inner {
+  width: 400px;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  animation: modalShow 0.2s linear;
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: var(--pink__color);
+  color: white;
+}
+.modal__body {
+  padding: 15px;
+}
+.modal__body h3 {
+  color: var(--pink) var(--pink__color);
+  margin-bottom: 10px;
+}
+.modal__footer {
+  padding: 15px;
+  text-align: right;
+}
+.modal__footer button {
+  padding: 10px 20px;
+  color: white;
+  background: var(--pink__color);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.hide {
+  display: none;
+}
+
+@keyframes modalShow {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+
+  to {
+    top: 50%;
+    opacity: ;
+  }
+}
